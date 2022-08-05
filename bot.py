@@ -464,7 +464,7 @@ def download_video(message, video):
     st1, out1 = getstatusoutput(filename_cmd)
     if st1 != 0:
         logger.error(filename_cmd)
-        caption = can't download probably drm.\n\nBy: {NAME}\n\nTitle: {title}\n\nTopic: {topic}\n\nError: {out1}"
+        caption = f"nhi hoga ye wala to .\n\nBy: {NAME}\n\nTitle: {title}\n\nTopic: {topic}\n\nError: {out1}"
         return 1, "", caption, quote, filename
     yt_title, path = out1.split("\n")
     if title == "":
