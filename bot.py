@@ -314,8 +314,7 @@ async def choose_html_video_format(bot, query):
         (filters.command("download_html") & ~filters.group)
         | filters.regex(f"^/download_html@{BOT}")
     )
-    & (filters.chat(sudo_html_groups) | filters.user(sudo_users))
-    & (filters.document | filters.reply)
+  
 )
 async def download_html(bot, msg):
     if msg.reply_to_message is not None:
