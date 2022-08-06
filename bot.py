@@ -392,10 +392,10 @@ def download_video(message, video):
 
     if "adityasirohiplayer" in link and ("brightcove" in link or len(link.split("/")[-1]) == 13):
         vid_id = link[-13:]
-        link = f"https://adityasirohiplayer.vercel.app/{vid_id}"
+        link = f"http://adityasirohiplayer.vercel.app/{vid_id}"
     elif "adityasirohiplayer" in link and "jwp" in link:
         vid_id = link[-8:]
-        link = f"https://adityasirohiplayer.vercel.app//{vid_id}"
+        link = f"http://adityasirohiplayer.vercel.app//{vid_id}"
     elif "jwplayer" in link and link.endswith('.m3u8'):
         vid_id = link.removesuffix(".m3u8").split("/")[-1]
         link = f"https://adityasirohiplayer.vercel.app/{vid_id}"
